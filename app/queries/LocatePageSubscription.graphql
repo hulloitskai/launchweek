@@ -1,0 +1,18 @@
+subscription LocatePageSubscription($password: String!) {
+  location {
+    details(password: $password) {
+      address
+      coordinates {
+        latitude
+        longitude
+      }
+      expiresAt
+      trail {
+        id
+        ...LocatePageTrailMarkerFragment
+      }
+    }
+    id
+    timestamp
+  }
+}

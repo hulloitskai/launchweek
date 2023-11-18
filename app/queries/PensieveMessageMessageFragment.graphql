@@ -1,0 +1,9 @@
+fragment PensieveMessageMessageFragment on PensieveMessage {
+  from
+  id
+  isEdited
+  likes
+  ...PensieveMessageLikeMessageFragment
+  text
+  timestamp
+}

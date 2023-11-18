@@ -1,0 +1,7 @@
+query JournalEntryCommentsQuery($entryId: ID!) {
+  comments: journalEntryComments(entryId: $entryId) {
+    createdAt
+    id
+    richText
+  }
+}

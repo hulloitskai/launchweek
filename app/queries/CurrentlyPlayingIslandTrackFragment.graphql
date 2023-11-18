@@ -1,0 +1,14 @@
+fragment CurrentlyPlayingIslandTrackFragment on SpotifyTrack {
+  album {
+    id
+    imageUrl
+  }
+  artists {
+    id
+    name
+  }
+  durationMilliseconds
+  id
+  name
+  url
+}

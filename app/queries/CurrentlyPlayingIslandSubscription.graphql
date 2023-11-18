@@ -1,0 +1,9 @@
+subscription CurrentlyPlayingIslandSubscription {
+  currentlyPlaying {
+    progressMilliseconds
+    timestamp
+    track {
+      id
+    }
+  }
+}

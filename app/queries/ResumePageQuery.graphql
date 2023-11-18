@@ -1,0 +1,3 @@
+query ResumePageQuery($variant: String) {
+  resume(variant: $variant)
+}

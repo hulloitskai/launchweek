@@ -1,0 +1,7 @@
+fragment JournalEntryEntryFragment on JournalEntry {
+  content
+  id
+  startedAt
+  title
+  url
+}

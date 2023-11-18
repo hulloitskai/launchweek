@@ -1,0 +1,25 @@
+.badge {
+  transition-property: transform, opacity, border !important;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &[data-with-lyrics] {
+    border-color: var(--cpi-border-color-active);
+
+    &[data-lyrics-explicit] {
+      border-color: var(--cpi-border-color-muted);
+      &:hover {
+        border-color: var(--cpi-border-color-active);
+      }
+    }
+  }
+}
+
+.marqueeText {
+  text-overflow: ellipsis;
+  text-transform: none;
+  white-space: nowrap;
+}

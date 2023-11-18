@@ -1,0 +1,20 @@
+.root {
+  &:not([data-has-likes]) {
+    .like {
+      opacity: 0;
+      transition: opacity 100ms ease;
+    }
+    &:hover {
+      .like {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.text {
+  flex-grow: 1;
+  white-space: pre-wrap;
+  word-break: break-word;
+  text-transform: none;
+}
