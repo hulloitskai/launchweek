@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   end
 
   # == Devise
+  devise_for :users, only: []
   # devise_for :users,
   #            skip: %i[sessions confirmations passwords],
   #            controllers: {
