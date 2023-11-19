@@ -23,15 +23,8 @@ export type HomePageProps = PagePropsWithData<HomePageQuery> & {};
 const HomePage: PageComponent<HomePageProps> = () => {
   return (
     <Stack align="center" gap="xl">
-      <Stack align="center" gap={32} className={classes.hero}>
-        <Title
-          size={60}
-          maw={1200}
-          lh={1.1}
-          mb="sm"
-          className={classes.heroTitle}
-          style={{ textAlign: "center", letterSpacing: -2 }}
-        >
+      <Stack className={classes.hero} align="center" gap={32}>
+        <Title className={classes.heroTitle} maw={1200}>
           <Text
             span
             inherit
@@ -56,14 +49,7 @@ const HomePage: PageComponent<HomePageProps> = () => {
         <ApplyButton size="xl" />
       </Stack>
       <Stack gap="xl" maw={800} py={44}>
-        <Title
-          id="about"
-          size={60}
-          maw={760}
-          lh={1.2}
-          mb="sm"
-          style={{ textAlign: "center", letterSpacing: -2 }}
-        >
+        <Title id="about" className={classes.sectionTitle}>
           About{" "}
           <Text
             span
@@ -79,7 +65,7 @@ const HomePage: PageComponent<HomePageProps> = () => {
             LaunchWeek
           </Text>
         </Title>
-        <Text fz={32} lh={1.3}>
+        <Text className={classes.sectionHeadline}>
           Choose what you want to make. Over 3 sessions, your project idea will
           come to reality.
         </Text>
@@ -107,16 +93,8 @@ const HomePage: PageComponent<HomePageProps> = () => {
         />
       </Box>
       <Stack gap="xl" maw={800} py={44}>
-        <Title
-          size={60}
-          maw={760}
-          lh={1.2}
-          mb="sm"
-          style={{ textAlign: "center", letterSpacing: -2 }}
-        >
-          Who is this for?
-        </Title>
-        <Text fz={32} lh={1.3}>
+        <Title className={classes.sectionTitle}>Who is this for?</Title>
+        <Text className={classes.sectionHeadline}>
           Our first cohort created podcasts, software apps, videos, games,
           journals, and more.
         </Text>
@@ -128,15 +106,7 @@ const HomePage: PageComponent<HomePageProps> = () => {
         </Text>
       </Stack>
       <Stack align="center" gap="xl" maw={720} py={44}>
-        <Title
-          size={60}
-          maw={760}
-          lh={1.2}
-          mb="md"
-          style={{ textAlign: "center", letterSpacing: -2 }}
-        >
-          LW2 Schedule
-        </Title>
+        <Title className={classes.sectionTitle}>LW2 Schedule</Title>
         <Timeline
           active={4}
           styles={{
@@ -171,14 +141,7 @@ const HomePage: PageComponent<HomePageProps> = () => {
         </Text>
       </Stack>
       <Stack gap="xl" w="100%" maw={800} py={44}>
-        <Title
-          id="faq"
-          size={60}
-          maw={760}
-          lh={1.2}
-          mb="sm"
-          style={{ textAlign: "center", letterSpacing: -2 }}
-        >
+        <Title id="faq" className={classes.sectionTitle}>
           FAQs
         </Title>
         <Accordion

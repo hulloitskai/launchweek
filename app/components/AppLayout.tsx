@@ -109,7 +109,7 @@ const AppLayout: FC<AppLayoutProps> = ({
           <Link href="/">
             <Group gap={2} className={classes.logoGroup}>
               <Image src={logoSrc} h={44} />
-              <Image src={logoTextSrc} h={28} />
+              <Image src={logoTextSrc} h={28} visibleFrom="sm" />
             </Group>
           </Link>
           <Group gap="lg" className={classes.menu}>

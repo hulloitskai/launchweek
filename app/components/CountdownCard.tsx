@@ -46,7 +46,7 @@ const CountdownCard: FC<CountdownCardProps> = ({ deadline, ...otherProps }) => {
         justify="space-around"
         style={{ columnGap: "var(--mantine-spacing-xl)" }}
       >
-        <Group gap="xl" className={classes.segmentGroup}>
+        <Group className={classes.segmentGroup}>
           {(duration ?? [null, null, null, null]).map((number, index) => (
             <CountdownSegment
               key={index}
@@ -71,10 +71,16 @@ type CountdownSegmentProps = {
 const CountdownSegment: FC<CountdownSegmentProps> = ({ number, unit }) => (
   <Stack gap={0}>
     <Box pos="relative">
-      <Text inherit fz={54} fw={700} lh={1.3} miw={44}>
+      <Text
+        inherit
+        className={classes.segmentNumber}
+        fw={700}
+        lh={1.3}
+        miw={44}
+      >
         {number ?? <>&nbsp;</>}
       </Text>
-      {!number && (
+      {typeof number !== "number" && (
         <Center pos="absolute" inset={0}>
           <Loader color="var(--mantine-color-white)" />
         </Center>
