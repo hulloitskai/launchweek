@@ -87,7 +87,7 @@ const CountdownSegment: FC<CountdownSegmentProps> = ({ number, unit }) => (
       )}
     </Box>
     <Center h="xl" pos="relative">
-      <Text inherit pos="absolute" top={0}>
+      <Text inherit className={classes.segmentUnit} pos="absolute" top={0}>
         {unit}
       </Text>
     </Center>

@@ -101,18 +101,19 @@ const AppLayout: FC<AppLayoutProps> = ({
       >
         <Group
           justify="space-between"
+          wrap="nowrap"
           gap="xs"
           w="100%"
           py="lg"
           className={classes.header}
         >
           <Link href="/">
-            <Group gap={2} className={classes.logoGroup}>
+            <Group className={classes.logoGroup} gap={2}>
               <Image src={logoSrc} h={44} />
               <Image src={logoTextSrc} h={28} visibleFrom="sm" />
             </Group>
           </Link>
-          <Group gap="lg" className={classes.menu}>
+          <Group className={classes.menu} gap="lg" wrap="nowrap">
             <AutoscrollAnchor href="/#about">About</AutoscrollAnchor>
             <AutoscrollAnchor href="/#faq">FAQ</AutoscrollAnchor>
             <ApplyButton />

@@ -1,6 +1,6 @@
 .segmentGroup {
   color: var(--mantine-color-white);
-  column-gap: rem(30);
+  column-gap: rem(24);
 
   @media (min-width: $mantine-breakpoint-sm) {
     gap: rem(44);
@@ -12,6 +12,14 @@
 
   @media (min-width: $mantine-breakpoint-xs) {
     font-size: rem(54);
+  }
+}
+
+.segmentUnit {
+  font-size: var(--mantine-font-size-sm);
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-font-size-md);
   }
 }
 
