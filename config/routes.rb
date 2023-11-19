@@ -67,6 +67,9 @@ Rails.application.routes.draw do
     post "/", action: :execute, as: :graphql
   end
 
+  # == Apply
+  get "/apply" => redirect("https://tally.so/r/w7NKvR")
+
   # == Errors
   scope controller: :errors do
     match "/401", action: :unauthorized, via: :all

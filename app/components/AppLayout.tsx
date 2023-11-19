@@ -12,6 +12,7 @@ import type { AppMetaProps } from "./AppMeta";
 import ActivityStatus from "./ActivityStatus";
 import AutoscrollAnchor from "./AutoscrollAnchor";
 // import AppMenu from "./AppMenu";
+import ApplyButton from "./ApplyButton";
 import AppFlash from "./AppFlash";
 import PageContainer from "./PageContainer";
 import PageLayout from "./PageLayout";
@@ -115,9 +116,7 @@ const AppLayout: FC<AppLayoutProps> = ({
           <Group gap="lg" className={classes.menu}>
             <AutoscrollAnchor href="/#about">About</AutoscrollAnchor>
             <AutoscrollAnchor href="/#faq">FAQ</AutoscrollAnchor>
-            <Button component="a" color="primary" href="apply.launchweek.rsvp">
-              Apply Now
-            </Button>
+            <ApplyButton />
           </Group>
         </Group>
         <AppShell.Main
