@@ -1,0 +1,16 @@
+.segmentGroup {
+  color: var(--mantine-color-white);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    gap: rem(44);
+  }
+}
+
+.applyButton {
+  background-color: var(--mantine-color-white);
+  color: var(--mantine-color-primary-filled);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
