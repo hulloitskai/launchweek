@@ -1,22 +1,15 @@
-# launchweek
+# LaunchWeek
 
-_kai's personal website :)_
+_1 week to create a project you'll be proud of._
 
-## setup
+## Setup
 
 ```bash
-# install tools
-brew install docker rbenv nodenv pyenv yarn watchman overmind
+# Install tools:
+brew install docker rbenv nodenv yarn watchman overmind
 
-# set up environment
+# Set up environment:
 git clone git@github.com:hulloitskai/launchweek
 cd launchweek
 bin/setup
 ```
-
-## todos
-
-- [ ] fix css shorthand processing in premailer
-- [ ] lowercase preview text in emails
-- [ ] switch to [microsoft clarity](https://clarity.microsoft.com) cuz it's
-      free
