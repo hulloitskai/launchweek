@@ -9,7 +9,7 @@ import type { AppShellProps, ContainerProps, MantineSize } from "@mantine/core";
 import AppMeta from "./AppMeta";
 import type { AppMetaProps } from "./AppMeta";
 
-import ActivityStatus from "./ActivityStatus";
+// import ActivityStatus from "./ActivityStatus";
 import AutoscrollAnchor from "./AutoscrollAnchor";
 // import AppMenu from "./AppMenu";
 import ApplyButton from "./ApplyButton";
@@ -93,9 +93,9 @@ const AppLayout: FC<AppLayoutProps> = ({
             flexDirection: "column",
             alignItems: "stretch",
           },
-          header: {
-            borderBottom: "none",
-          },
+          // header: {
+          //   borderBottom: "none",
+          // },
         }}
         {...otherProps}
       >
@@ -103,7 +103,6 @@ const AppLayout: FC<AppLayoutProps> = ({
           justify="space-between"
           gap="xs"
           w="100%"
-          px="sm"
           py="lg"
           className={classes.header}
         >
@@ -151,7 +150,7 @@ const AppLayout: FC<AppLayoutProps> = ({
           )}
           {content}
         </AppShell.Main>
-        <Box
+        {/* <Box
           h="var(--app-shell-footer-height)"
           px={8}
           style={{
@@ -160,7 +159,7 @@ const AppLayout: FC<AppLayoutProps> = ({
           }}
         >
           <ActivityStatus h="100%" style={{ flexShrink: 1 }} />
-        </Box>
+        </Box> */}
       </AppShell>
       <AppFlash />
     </PageLayout>

@@ -23,7 +23,7 @@ export type HomePageProps = PagePropsWithData<HomePageQuery> & {};
 const HomePage: PageComponent<HomePageProps> = () => {
   return (
     <Stack align="center" gap="xl">
-      <Stack align="center" gap={32} py={44} className={classes.hero}>
+      <Stack align="center" gap={32} className={classes.hero}>
         <Title
           size={60}
           maw={1200}

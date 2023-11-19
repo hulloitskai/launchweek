@@ -1,4 +1,5 @@
 .hero {
+  padding: rem(44) 0;
   @media (min-width: $mantine-breakpoint-sm) {
     padding: rem(140) 0;
   }

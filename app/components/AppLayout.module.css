@@ -6,9 +6,12 @@
 }
 
 .header {
+  padding-left: var(--mantine-spacing-sm);
+  padding-right: var(--mantine-spacing-sm);
+
   @media (min-width: $mantine-breakpoint-sm) {
-    padding-left: var(--mantine-spacing-xl) !important;
-    padding-right: var(--mantine-spacing-xl) !important;
+    padding-left: var(--mantine-spacing-xl);
+    padding-right: var(--mantine-spacing-xl);
   }
 }
 
