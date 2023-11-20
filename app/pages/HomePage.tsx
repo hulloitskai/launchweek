@@ -25,6 +25,7 @@ const HomePage: PageComponent<HomePageProps> = () => {
     <Stack align="center" gap="xl">
       <Stack className={classes.hero} align="center" gap={32}>
         <Title className={classes.heroTitle} maw={1200}>
+          Create a project you&apos;ll be proud of{" "}
           <Text
             span
             inherit
@@ -36,9 +37,8 @@ const HomePage: PageComponent<HomePageProps> = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            1 week to create
-          </Text>{" "}
-          a project you&apos;ll be proud of.
+            in 1 week
+          </Text>
         </Title>
         <Text size="xl" c="primary" style={{ textAlign: "center" }}>
           Cohort 2 begins Nov. 27 - Dec 3.{" "}

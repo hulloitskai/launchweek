@@ -1,6 +1,6 @@
 # LaunchWeek
 
-_1 week to create a project you'll be proud of._
+_Create a project you'll be proud of in 1 week._
 
 ## Setup
 
