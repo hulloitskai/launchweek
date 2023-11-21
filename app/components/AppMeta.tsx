@@ -3,8 +3,9 @@ import { usePageVisibilityChange } from "~/helpers/page";
 
 const AppMetaSiteType = "website";
 const AppMetaSiteName = "LaunchWeek";
-const AppMetaSiteDescription = undefined; // "Welcome to my little corner of the internet :)";
-const AppMetaSiteImage = undefined; // "/banner.png";
+const AppMetaSiteDescription =
+  "Create a project you'll be proud of, in one week.";
+const AppMetaSiteImage = "/banner.png";
 const AppMetaTitleSeparator = "|";
 
 export type AppMetaProps = {
