@@ -16,7 +16,7 @@ const APPLICATION_DEADLINE = DateTime.fromObject({
   hour: 23,
   minute: 59,
   second: 59,
-});
+}).setZone("America/Vancouver", { keepLocalTime: true })
 
 export type HomePageProps = PagePropsWithData<HomePageQuery> & {};
 
