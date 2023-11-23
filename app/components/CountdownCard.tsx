@@ -22,12 +22,14 @@ const CountdownCard: FC<CountdownCardProps> = ({ deadline, ...otherProps }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       const diff = deadline.diffNow(COUNTDOWN_UNITS);
-      setDuration([
-        diff.days,
-        diff.hours,
-        diff.minutes,
-        Math.round(diff.seconds),
-      ]);
+      if (diff.toMillis() >= 0) {
+        setDuration([
+          Math.max(diff.days, 0),
+          Math.max(diff.hours, 0),
+          Math.max(diff.minutes, 0),
+          Math.max(Math.round(diff.seconds), 0),
+        ]);
+      }
     }, 1000);
     return () => {
       clearInterval(interval);
