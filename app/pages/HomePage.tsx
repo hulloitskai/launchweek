@@ -13,7 +13,7 @@ const APPLICATION_DEADLINE = DateTime.fromObject({
   year: 2023,
   month: 11,
   day: 23,
-  hour: 11,
+  hour: 23,
   minute: 59,
   second: 59,
 });
