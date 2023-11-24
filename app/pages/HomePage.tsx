@@ -12,11 +12,11 @@ import classes from "./HomePage.module.css";
 const APPLICATION_DEADLINE = DateTime.fromObject({
   year: 2023,
   month: 11,
-  day: 23,
+  day: 24,
   hour: 23,
   minute: 59,
   second: 59,
-}).setZone("America/Vancouver", { keepLocalTime: true })
+}).setZone("America/Vancouver", { keepLocalTime: true });
 
 export type HomePageProps = PagePropsWithData<HomePageQuery> & {};
 
