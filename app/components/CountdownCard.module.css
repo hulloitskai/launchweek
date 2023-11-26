@@ -24,10 +24,12 @@
 }
 
 .applyButton {
-  background-color: var(--mantine-color-white);
-  color: var(--mantine-color-primary-filled);
+  &:not([disabled]) {
+    background-color: var(--mantine-color-white);
+    color: var(--mantine-color-primary-filled);
 
-  &:hover {
-    opacity: 0.8;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

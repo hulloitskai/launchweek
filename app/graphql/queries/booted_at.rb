@@ -12,7 +12,7 @@ module Queries
     # == Resolver
     sig { returns(T.nilable(Time)) }
     def resolve
-      ItsKai.application.booted_at
+      LaunchWeek.application.booted_at
     end
   end
 end

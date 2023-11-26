@@ -4,6 +4,7 @@ import {
   Anchor,
   Button,
   DEFAULT_THEME,
+  HoverCard,
   Loader,
   LoadingOverlay,
   Menu,
@@ -103,6 +104,11 @@ const BASE_THEME_OVERRIDE = createTheme({
         loaderProps: {
           size: "sm",
         },
+      },
+    }),
+    HoverCard: HoverCard.extend({
+      defaultProps: {
+        radius: "lg",
       },
     }),
     Menu: Menu.extend({

@@ -10,7 +10,7 @@ require "rails/all"
 Bundler.require(*Rails.groups)
 
 # == Configuration
-module ItsKai
+module LaunchWeek
   extend T::Sig
 
   class Application < Rails::Application
@@ -124,6 +124,6 @@ module ItsKai
   end
 
   # == Methods
-  sig { returns(ItsKai::Application) }
-  def self.application = T.cast(Rails.application, ItsKai::Application)
+  sig { returns(LaunchWeek::Application) }
+  def self.application = T.cast(Rails.application, LaunchWeek::Application)
 end

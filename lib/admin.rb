@@ -9,7 +9,7 @@ module Admin
   # == Accessors
   sig { returns(T.nilable(String)) }
   def self.emails_expr
-    ENV["ADMIN_EMAILS"]
+    ENV["ADMIN_EMAILS"].presence
   end
 
   sig { returns(T::Array[String]) }

@@ -17,8 +17,8 @@ module Resolver
   private
 
   # == Helpers
-  sig { returns(ItsKai::Application) }
-  def app = ItsKai.application
+  sig { returns(LaunchWeek::Application) }
+  def app = LaunchWeek.application
 
   sig { returns(T.nilable(ActionController::Base)) }
   def controller
