@@ -85,6 +85,14 @@ Rails.application.routes.draw do
     "https://github.com/hulloitskai/launchweek",
     status: 302,
   )
+  get "/ideas" => redirect(
+    "https://www.figma.com/community/file/1298426462618518881/launchweek-idea-slide",
+    status: 302,
+  )
+  get "/sesh1" => redirect(
+    "https://tally.so/r/wo2VGP",
+    status: 302,
+  )
 
   # == Development
   if Rails.env.development?
