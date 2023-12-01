@@ -93,6 +93,10 @@ Rails.application.routes.draw do
     "https://tally.so/r/wo2VGP",
     status: 302,
   )
+  get "/sesh2" => redirect(
+    "https://tally.so/r/wLPvr2",
+    status: 302,
+  )
 
   # == Development
   if Rails.env.development?
