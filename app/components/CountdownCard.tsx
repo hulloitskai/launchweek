@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import type { ComponentPropsWithoutRef, FC } from "react";
+import { APPLICATION_DEADLINE } from "~/helpers/application";
 
 import { Loader, Text } from "@mantine/core";
 import type { BoxProps } from "@mantine/core";
 
-import { DateTime } from "luxon";
 import type { DurationUnit } from "luxon";
 
 import ApplyButton from "./ApplyButton";
@@ -11,17 +11,16 @@ import classes from "./CountdownCard.module.css";
 
 const COUNTDOWN_UNITS: DurationUnit[] = ["days", "hours", "minutes", "seconds"];
 
-export type CountdownCardProps = BoxProps & {
-  readonly deadline: DateTime;
-};
+export type CountdownCardProps = BoxProps &
+  Omit<ComponentPropsWithoutRef<"div">, "children">;
 
-const CountdownCard: FC<CountdownCardProps> = ({ deadline, ...otherProps }) => {
+const CountdownCard: FC<CountdownCardProps> = ({ ...otherProps }) => {
   const [duration, setDuration] = useState<
     [number, number, number, number] | null
   >(null);
   useEffect(() => {
     const interval = setInterval(() => {
-      const diff = deadline.diffNow(COUNTDOWN_UNITS);
+      const diff = APPLICATION_DEADLINE.diffNow(COUNTDOWN_UNITS);
       if (!duration || diff.toMillis() >= 0) {
         setDuration([
           Math.max(diff.days, 0),
@@ -35,7 +34,7 @@ const CountdownCard: FC<CountdownCardProps> = ({ deadline, ...otherProps }) => {
       clearInterval(interval);
       setDuration(null);
     };
-  }, [deadline]);
+  }, []);
   return (
     <Card
       py="lg"

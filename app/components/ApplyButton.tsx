@@ -1,41 +1,47 @@
 import type { ComponentPropsWithoutRef, FC } from "react";
-import { HoverCard, type ButtonProps, Text } from "@mantine/core";
+import { APPLICATION_DEADLINE } from "~/helpers/application";
 
-// export type ApplyButtonProps = ButtonProps &
-//   Omit<ComponentPropsWithoutRef<"a">, "children">;
+import type { BoxProps, ButtonProps } from "@mantine/core";
+import { HoverCard, Text } from "@mantine/core";
 
-// const ApplyButton: FC<ApplyButtonProps> = ({ ...otherProps }) => (
-//   <Button component="a" color="primary" href="/apply" {...otherProps}>
-//     Apply Now
-//   </Button>
-// );
+export type ApplyButtonProps = BoxProps &
+  Omit<ComponentPropsWithoutRef<"div">, "children"> &
+  Pick<ButtonProps, "size">;
 
-export type ApplyButtonProps = ButtonProps &
-  Omit<ComponentPropsWithoutRef<"button">, "children">;
-
-const ApplyButton: FC<ApplyButtonProps> = ({ ...otherProps }) => (
-  <HoverCard withArrow shadow="md" width={280}>
-    <HoverCard.Target>
-      <Box>
-        <Button color="primary" disabled {...otherProps}>
+const ApplyButton: FC<ApplyButtonProps> = ({ size, ...otherProps }) => {
+  const disabled = useMemo(() => DateTime.now() > APPLICATION_DEADLINE, []);
+  return (
+    <Box {...otherProps}>
+      {disabled ? (
+        <HoverCard withArrow shadow="md" width={280}>
+          <HoverCard.Target>
+            <Box>
+              <Button color="primary" disabled {...{ size }}>
+                Apply Now
+              </Button>
+            </Box>
+          </HoverCard.Target>
+          <HoverCard.Dropdown>
+            <Text size="sm">
+              Applications are now closed.
+              <br />
+              <Anchor
+                href="https://instagram.com/launchweek.rsvp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Follow our Instagram instead :)
+              </Anchor>
+            </Text>
+          </HoverCard.Dropdown>
+        </HoverCard>
+      ) : (
+        <Button component="a" color="primary" href="/apply" {...{ size }}>
           Apply Now
         </Button>
-      </Box>
-    </HoverCard.Target>
-    <HoverCard.Dropdown>
-      <Text size="sm">
-        Applications are now closed.
-        <br />
-        <Anchor
-          href="https://instagram.com/launchweek.rsvp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Follow our Instagram instead :)
-        </Anchor>
-      </Text>
-    </HoverCard.Dropdown>
-  </HoverCard>
-);
+      )}
+    </Box>
+  );
+};
 
 export default ApplyButton;

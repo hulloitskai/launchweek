@@ -9,15 +9,6 @@ import AppLayout from "~/components/AppLayout";
 
 import classes from "./HomePage.module.css";
 
-const APPLICATION_DEADLINE = DateTime.fromObject({
-  year: 2023,
-  month: 11,
-  day: 24,
-  hour: 23,
-  minute: 59,
-  second: 59,
-}).setZone("America/Vancouver", { keepLocalTime: true });
-
 export type HomePageProps = PagePropsWithData<HomePageQuery> & {};
 
 const HomePage: PageComponent<HomePageProps> = () => (
@@ -40,9 +31,9 @@ const HomePage: PageComponent<HomePageProps> = () => (
         </Text>
       </Title>
       <Text size="xl" c="primary" style={{ textAlign: "center" }}>
-        Cohort 2 begins Nov. 27 - Dec 3.{" "}
+        Cohort 3 begins Mar. 11 - Mar 15.{" "}
         <Text span inherit fw={600}>
-          Applications close Nov. 23
+          Applications close Mar. 9
         </Text>
       </Text>
       <ApplyButton size="xl" />
@@ -75,21 +66,16 @@ const HomePage: PageComponent<HomePageProps> = () => (
           others to experience.
         </Text>
         <Text inherit>
-          We&apos;re currently accepting applications for LW2, which begins on{" "}
+          We&apos;re currently accepting applications for LW3, which begins on{" "}
           <Text span inherit fw={600}>
-            November 27
+            March 11
           </Text>
           .
         </Text>
       </Stack>
     </Stack>
     <Box py={44} w="100%">
-      <CountdownCard
-        deadline={APPLICATION_DEADLINE}
-        w="100%"
-        maw={900}
-        mx="auto"
-      />
+      <CountdownCard w="100%" maw={900} mx="auto" />
     </Box>
     <Stack gap="xl" maw={800} py={44}>
       <Title className={classes.sectionTitle}>Who is this for?</Title>
@@ -121,22 +107,15 @@ const HomePage: PageComponent<HomePageProps> = () => (
         <Timeline.Item title="Session 1: Idea (+ Social!)">
           Monday 5:30 - 9:00
         </Timeline.Item>
-        <Timeline.Item title="Session 2: Build">
-          Wed{" "}
-          <Text span inherit fw={600}>
-            or
-          </Text>{" "}
-          Thu 5:30 - 7:30
-        </Timeline.Item>
+        <Timeline.Item title="Session 2: Build">Wed 5:30 - 7:30</Timeline.Item>
         <Timeline.Item title="Session 3: Launch">
           Friday 5:30 - 7:30
         </Timeline.Item>
-        <Timeline.Item title="Demos">Sunday 12:00 - 3:00</Timeline.Item>
+        {/* <Timeline.Item title="Demos">Sunday 12:00 - 3:00</Timeline.Item> */}
       </Timeline>
       <Text fz={22} style={{ textAlign: "center" }}>
-        All 3 sessions require in-person attendance on UBC campus. For Session
-        2, participants can choose to attend on Wednesday or Thursday. Demos are
-        optional but encouraged.
+        All 3 sessions require in-person attendance on UBC campus.
+        {/* Demos are optional but encouraged. */}
       </Text>
     </Stack>
     <Stack gap="xl" w="100%" maw={800} py={44}>
@@ -184,16 +163,16 @@ const HomePage: PageComponent<HomePageProps> = () => (
           <Accordion.Panel>
             <Stack>
               <Text inherit>
-                We require you to attend session 1 (Mon), 2 (Wed or Thurs), and
-                3 (Fri). If you miss one due to unexpected circumstances, it is
-                your responsibility to catch up with the help of your assigned
+                We require you to attend session 1 (Mon), 2 (Wed), and 3 (Fri).
+                If you miss one due to unexpected circumstances, it is your
+                responsibility to catch up with the help of your assigned
                 mentor.
               </Text>
-              <Text inherit>
+              {/* <Text inherit>
                 We strongly encourage you to demo at the showcase event on Sun,
                 Dec. 3, but if you cannot make it, we&apos;ll find another way
                 for you to show off your project!
-              </Text>
+              </Text> */}
             </Stack>
           </Accordion.Panel>
         </Accordion.Item>

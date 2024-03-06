@@ -69,7 +69,7 @@ Rails.application.routes.draw do
   end
 
   # == Apply
-  get "/apply" => redirect("https://tally.so/r/w7NKvR")
+  get "/apply" => redirect("https://tally.so/r/w2NWzj")
 
   # == Errors
   scope controller: :errors do
