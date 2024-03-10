@@ -33,7 +33,7 @@ const HomePage: PageComponent<HomePageProps> = () => (
       <Text size="xl" c="primary" style={{ textAlign: "center" }}>
         Cohort 3 begins Mar. 11 - Mar 15.{" "}
         <Text span inherit fw={600}>
-          Applications close Mar. 9
+          Applications close Mar. 10
         </Text>
       </Text>
       <ApplyButton size="xl" />
